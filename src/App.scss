@@ -1,0 +1,71 @@
+$text-area-bg: #d1d1d1;
+$font-family: 'BlinkMacSystemFont';
+$font-size: 1em;
+
+.App {
+    border: 1px solid black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: $font-size;
+    background-image: url('../Collage\ Template.jpg');
+    background-size: contain;
+}
+
+.chat-box{
+    flex-grow: 2;
+    background-color: white;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: scroll;
+    max-height: 75vh;
+    p{
+        padding: 10px;
+    }
+    .user {
+        color: red;
+        font-weight: 600;
+    }
+    .assistant {
+        color: green;
+        font-weight: 600;
+    }
+}
+.text-box-wrapper{
+    display: flex;
+    flex-grow: 1;
+    max-height: 25vh;
+    border:1px solid black;
+    margin: 10px;
+    position: relative;
+    background-color: $text-area-bg;
+    border-radius: 10px;
+
+    .text-box-content {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        margin: 5px;
+        resize: none;
+        font-family: $font-family;
+        background-color: $text-area-bg;
+        font-size: $font-size;
+    }
+    .text-box-content:focus {
+        outline: none;
+    }
+    .send-btn-wrapper {
+        align-self: baseline;
+        width: 42px;
+        
+    }
+    
+
+    svg {
+        position: absolute;
+        bottom: 0;
+        right: 0px;
+        margin: 10px;        
+    }
+}
